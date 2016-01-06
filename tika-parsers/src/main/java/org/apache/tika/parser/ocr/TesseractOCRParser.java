@@ -53,9 +53,9 @@ import org.apache.tika.parser.CompositeParser;
 import org.apache.tika.parser.ParseContext;
 import org.apache.tika.parser.Parser;
 import org.apache.tika.parser.external.ExternalParser;
-import org.apache.tika.parser.image.ImageParser;
-import org.apache.tika.parser.image.TiffParser;
-import org.apache.tika.parser.jpeg.JpegParser;
+//import org.apache.tika.parser.image.ImageParser;
+//import org.apache.tika.parser.image.TiffParser;
+//import org.apache.tika.parser.jpeg.JpegParser;
 import org.apache.tika.sax.XHTMLContentHandler;
 import org.xml.sax.ContentHandler;
 import org.xml.sax.SAXException;
@@ -197,7 +197,7 @@ public class TesseractOCRParser extends AbstractParser {
             //  composite parsers with strategies (eg Composite, Try In Turn),
             //  always send the image onwards to the regular parser to have
             //  the metadata for them extracted as well
-            _TMP_IMAGE_METADATA_PARSER.parse(tikaStream, handler, metadata, context);
+            //_TMP_IMAGE_METADATA_PARSER.parse(tikaStream, handler, metadata, context);
         } finally {
             tmp.dispose();
             if (output != null) {
@@ -205,6 +205,7 @@ public class TesseractOCRParser extends AbstractParser {
             }
         }
     }
+/*
     // TIKA-1445 workaround parser
     private static Parser _TMP_IMAGE_METADATA_PARSER = new CompositeImageParser();
     private static class CompositeImageParser extends CompositeParser {
@@ -216,7 +217,7 @@ public class TesseractOCRParser extends AbstractParser {
             super(new MediaTypeRegistry(), imageParsers);
         }
     }
-
+*/
     /**
      * Run external tesseract-ocr process.
      *

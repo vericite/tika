@@ -75,13 +75,13 @@
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
-    <dependency>
+    <!--dependency>
       <groupId>org.apache.tika</groupId>
       <artifactId>tika-parsers</artifactId>
-      <version>${project.version}</version>
+      <version>vericite-1.11</version>
       <type>test-jar</type>
       <scope>test</scope>
-    </dependency>
+    </dependency-->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
